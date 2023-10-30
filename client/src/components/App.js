@@ -33,9 +33,10 @@ class App extends React.Component {
       return;
     } else if (newState.platform === "google_trends") {
       newState.location =
-        newState.location === "worldwide" ? "australia" : newState.location;
+        newState.location === "worldwide" ? "india" : newState.location;
     }
     api.getData("locations").then((result) => {
+      console.log("result is", result);
       if (result.success) {
         newState.locations = result.data.map((a) => a.location);
         newState.locations =
