@@ -37,16 +37,12 @@ const Filters = ({ platform, location, locations, editFilter }) => {
           icon={platformData[platform].icon}
           size="2x"
         />
-        <Dropdown
+        <div
           label="platform"
           value={platform}
-          options={[
-            "Google Trends",
-            "Reddit Subs",
-            "Twitter Trends",
-            "YouTube Videos",
-          ]}
+          // options={["Google Trends"]}
           onChange={editFilter}
+          placeholder="Google Trends"
         />
         <Dropdown
           label="location"
