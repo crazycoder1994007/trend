@@ -19,8 +19,8 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "[trends server] MongoDB error:"));
 db.once("open", () => {
   console.log("[trends server] Successfully connected to MongoDB!");
-  //   redditSubs.getSubs();
   googleTrends.getTrends();
+  //   redditSubs.getSubs();
   //   youtubeVideos.getVideos();
   //   twitterTrends.getTrends();
 });

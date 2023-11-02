@@ -11,6 +11,7 @@ const googleTrends = {
     for (let i = 0; i < locationLen; i++) {
       const location = locations[i];
       if (!location.iso) continue;
+      console.log("111111111111111111111");
       googleModel.findOne(
         { location: location.location },
         {},

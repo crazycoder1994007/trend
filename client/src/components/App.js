@@ -50,6 +50,7 @@ class App extends React.Component {
 
   getData(newState) {
     const endpoint = `${newState.platform}/${newState.location}`;
+    console.log("end point is ", endpoint);
     api.getData(endpoint).then((result) => {
       if (result.success) {
         newState.data = result.data;
